@@ -1,5 +1,5 @@
 # Shanbay JK
-这个油猴脚本让[扇贝单词网页版](https://web.shanbay.com/wordsweb/)使用 j 触发 1 跟 d 的功能，k 触发 2 的功能
+在[扇贝单词网页版](https://web.shanbay.com/wordsweb/)上让 j 拥有 1 跟 d 的功能，k 拥有 2 的功能。
 
 ## 安装
 https://greasyfork.org/en/scripts/422610-shanbay-jk
