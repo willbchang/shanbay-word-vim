@@ -8,10 +8,10 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
-    function click(element){
+    function click(element) {
         const event = document.createEvent('Events');
         event.initEvent('click', true, false);
         element.dispatchEvent(event);
