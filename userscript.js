@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Shanbay JK
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/willbchang/shanbay-jk
 // @version      1.0
-// @description  Replace shortcut 1 and d with j, shortcut 2 with k.
-// @author       You
+// @description  Make j work like 1 and d, make k work like 2.
+// @author       Will B Chang
 // @match        https://web.shanbay.com/wordsweb/*
-// @grant        none
+// @grant        GPL-3.0
 // ==/UserScript==
 
 (function () {
