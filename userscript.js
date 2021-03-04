@@ -18,14 +18,15 @@
         element.dispatchEvent(event);
     }
 
+    // 监听键盘按下去的事件
     document.addEventListener('keypress', ({key}) => {
-        // 获取认识、不认识、下一个、撤销四个元素
+        // 从页面上获取认识、不认识、下一个、撤销四个元素
         const know = document.querySelector('div[class*=index_green]')
         const dontKnow = document.querySelector('div[class*=index_red]')
         const next = document.querySelector('div[class*=StudyPage_nextBtn]')
         const undo = document.querySelector('div[class*=Message_message] div span')
 
-        // j: 如果页面上有 know 的元素，则触发其点击事件，没有的话就触发 next 的点击事件
+        // j: 如果按键是 j，然后页面上有 know 元素，则触发其点击事件，没有的话就触发 next 的点击事件
         // k: 同理
         if (key === 'j') click(know || next)
         if (key === 'k') click(dontKnow || undo)
