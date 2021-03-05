@@ -11,8 +11,8 @@
 (function () {
     'use strict';
 
-    // 监听按键上抬
-    document.addEventListener('keyup', ({repeat, key}) => {
+    // 监听按键事件
+    document.addEventListener('keypress', ({repeat, key}) => {
         // 避免重复按键导致意外触发多个 j 的功能
         if (repeat) return
 
