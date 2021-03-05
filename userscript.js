@@ -11,10 +11,10 @@
 (function () {
     'use strict';
 
-    // 监听按键上抬的事件
+    // 监听按键上抬
     document.addEventListener('keyup', ({key}) => {
-        // 避免在输入单词时触发 next 的点击事件导致拼写无法完成,
-        //  并且在单词界面拼写正确后按 j 可以直接跳到下一个单词, 而不用返回原页面
+        // 避免在输入单词时输入 j 而触发 next 元素的点击事件所导致拼写无法完成的情况,
+        //  并且确保在单词界面拼写正确后按 j 可以直接跳到下一个单词, 而不用返回原页面
         const isSpelling = document.querySelector('p[class*=index_show]')?.textContent === "你的拼写还不正确，请继续尝试。"
         if (isSpelling) return
 
@@ -29,7 +29,7 @@
         if (key === 'j') click(know || next)
         if (key === 'k') click(dontKnow || undo)
 
-        // 模拟点击事件
+        // 模拟鼠标点击
         function click(element) {
             const event = document.createEvent('Events');
             event.initEvent('click', true, false);
