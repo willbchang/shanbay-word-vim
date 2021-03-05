@@ -11,8 +11,8 @@
 (function () {
     'use strict';
 
-    // 监听键盘按下去的事件
-    document.addEventListener('keypress', ({key}) => {
+    // 监听按键上抬的事件
+    document.addEventListener('keyup', ({key}) => {
         // 避免在输入单词时触发 next 的点击事件导致拼写无法完成,
         //  并且在单词界面拼写正确后按 j 可以直接跳到下一个单词, 而不用返回原页面
         const isSpelling = document.querySelector('p[class*=index_show]')?.textContent === "你的拼写还不正确，请继续尝试。"
