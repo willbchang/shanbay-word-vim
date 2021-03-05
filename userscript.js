@@ -25,9 +25,9 @@
         const dontKnow = document.querySelector('div[class*=index_red]')
         const next = document.querySelector('div[class*=StudyPage_nextBtn]')
         const undo = document.querySelector('div[class*=Message_message] div span')
-        const isSpelling = document.getElementById('checkAnswer') !== null
+        const isSpelling = document.querySelector('p[class*=index_show]')?.textContent === "你的拼写还不正确，请继续尝试。"
 
-        // 避免在输入单词时触发 next 的点击事件导致拼写无法完成
+        // 避免在输入单词时触发 next 的点击事件导致拼写无法完成, 并且在单词界面拼写正确后按 j 可以直接跳到下一个单词
         // j: 如果按键是 j，然后页面上有 know 元素，则触发其点击事件，没有的话就触发 next 的点击事件
         // k: 同理
         if (isSpelling) return
