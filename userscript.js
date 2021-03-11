@@ -19,7 +19,10 @@
 
         // 避免在输入单词时输入 j 而触发 next 元素的点击事件所导致拼写无法完成的情况,
         //  并且确保在单词界面拼写正确后按 j 可以直接跳到下一个单词, 而不用返回原页面
-        const isSpelling = document.querySelector('p[class*=index_show]')?.textContent === "你的拼写还不正确，请继续尝试。"
+        //  k 同理
+        const isSpelling = document.querySelector('p[class*=index_show]')
+            ?.textContent === "你的拼写还不正确，请继续尝试。"
+            || document.querySelector('#checkAnswer')?.value === ''
         if (isSpelling) return
 
         // 从页面上获取认识、不认识、下一个、撤销四个元素
