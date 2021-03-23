@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Shanbay JK
 // @namespace    https://github.com/willbchang/shanbay-jk
-// @version      1.2
+// @version      1.2.1
 // @description  在扇贝单词网页版上让 j 拥有 1 跟 d 的功能，k 拥有 2 的功能
 // @author       Will B Chang
 // @match        https://web.shanbay.com/wordsweb/*
