@@ -1,13 +1,12 @@
 // ==UserScript==
-// @name         Shanbay JK
-// @namespace    https://github.com/willbchang/shanbay-jk
+// @name         Shanbay Word Vim
+// @namespace    https://github.com/willbchang/shanbay-word-vim
 // @version      1.2.1
-// @description  在扇贝单词网页版上让 j 拥有 1 跟 d 的功能，k 拥有 2 的功能
+// @description  在扇贝单词网页版上使用部分 Vim 的键位
 // @author       Will B Chang
 // @match        https://web.shanbay.com/wordsweb/*
-// @grant        GPL-3.0
+// @grant        AGPL-3.0
 // ==/UserScript==
-
 (function () {
     'use strict';
 
@@ -32,6 +31,10 @@
         const undo = document.querySelector('div[class*=Message_message] div span')
         const dele = document.querySelector('i[class*=index_simpleOption]')
 
+        if (key === 's') {
+            click(know)
+            press('s')
+        }
         // j: 如果按键是 j，然后页面上有 know 元素，则触发其点击事件，没有的话就触发 next 的点击事件
         // k: 同理
         if (key === 'j') click(know || next)
@@ -42,7 +45,12 @@
         function click(element) {
             const event = document.createEvent('Events');
             event.initEvent('click', true, false);
-            element.dispatchEvent(event);
+            element?.dispatchEvent(event);
+        }
+
+        // 模拟按键
+        function press(key) {
+            document.dispatchEvent(new KeyboardEvent('keydown', {key}))
         }
     })
 })();
