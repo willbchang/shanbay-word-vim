@@ -5,7 +5,6 @@
 // @description  在扇贝单词网页版上使用部分 Vim 的键位
 // @author       Will B Chang
 // @match        https://web.shanbay.com/wordsweb/*
-// @grant        AGPL-3.0
 // ==/UserScript==
 (function () {
     'use strict';
