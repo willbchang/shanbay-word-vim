@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Shanbay Word Vim
 // @namespace    https://github.com/willbchang/shanbay-word-vim
-// @version      1.2.1
+// @version      1.2.3
 // @description  在扇贝单词网页版上使用部分 Vim 的键位
 // @author       Will B Chang
 // @match        https://web.shanbay.com/wordsweb/*
